@@ -2,3 +2,7 @@ pkg/
 *.swp
 /metadata.json
 .forge-releng/
+
+# Dev
+.vagrant/
+Vagrantfile
