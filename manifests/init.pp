@@ -10,6 +10,7 @@ class memcached (
   $item_size       = false,
   $lock_memory     = false,
   $listen_ip       = '0.0.0.0',
+  $ports           = ['11211'],
   $tcp_port        = 11211,
   $udp_port        = 11211,
   $user            = $::memcached::params::user,
@@ -44,6 +45,8 @@ class memcached (
       require => Package[$memcached::params::package_name]
     }
   }
+
+
 
   if $manage_firewall_bool == true {
     firewall { "100_tcp_${tcp_port}_for_memcached":
