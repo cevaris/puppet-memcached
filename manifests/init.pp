@@ -47,7 +47,6 @@ class memcached (
   }
 
 
-
   if $manage_firewall_bool == true {
     firewall { "100_tcp_${tcp_port}_for_memcached":
       port   => $tcp_port,
